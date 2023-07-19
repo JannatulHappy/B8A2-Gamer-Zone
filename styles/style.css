@@ -4,6 +4,9 @@
   box-sizing: border-box;
   font-family: "Work Sans", sans-serif;
 }
+body {
+  overflow-x: hidden;
+}
 /* shared styles */
 :root {
   /* color */
@@ -200,7 +203,7 @@ nav {
 main {
   max-width: 1440px;
   margin: 0 auto;
-  padding: 0 20px;
+  padding: 0 30px;
 }
 /* gamer section styles starts here */
 .gamer-container {
@@ -247,20 +250,40 @@ main {
   grid-gap: 24px;
   margin-top: 48px;
 }
-
-.videos-content > div > img {
-  width: 100%;
+.videos-content > p {
+  margin-top: 24px;
+  color: #534c64;
+  font-size: 20px;
+  font-weight: 500;
+  line-height: 30px;
 }
 .videos-content {
   position: relative;
-  text-align: center;
 }
-.videos-hover {
-  width: 335px;
-  height: 390px;
+
+.image__img {
+  display: block;
+  width: 100%;
+}
+
+.image__overlay {
   position: absolute;
-  top: 0%;
-  left: 0%;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 82%;
+  background: rgba(0, 0, 0, 0.6);
+  color: #ffffff;
+  font-family: "Quicksand", sans-serif;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  transition: opacity 0.25s;
+}
+
+.image__overlay--primary {
   border-radius: 16px;
   background: linear-gradient(
     0deg,
@@ -270,34 +293,24 @@ main {
   border: 4px solid var(--pink);
 }
 
-.videos-hover p {
-  font-size: var(--font-size02);
-  font-weight: var(--font-weight02);
-  margin-top: 5px;
-  color: var(--pink);
-  background-color: transparent;
-}
-.videos-before-hover p {
-  margin: 20px 0px;
-  color: var(--dark03);
-  font-size: var(--font-size02);
-  font-weight: var(--font-weight03);
+.image__overlay > * {
+  transform: translateY(20px);
+  transition: transform 0.25s;
 }
 
-.fa-circle-play {
-  background-color: transparent;
-  color: white;
+.image__overlay:hover {
+  opacity: 1;
 }
-.videos-hover .fa-youtube {
-  color: white;
-  width: 8px;
-  height: 48px;
+
+.image__overlay:hover > * {
+  transform: translateY(0);
 }
-.videos-hover {
-  display: none;
-}
-.videos-content .videos-before-hover:hover + .videos-hover {
-  display: block;
+
+.videos__description {
+  font-size: --font-size03;
+  margin-top: 16px;
+  font-weight: var(--font-weight02);
+  color: var(--pink);
 }
 
 /* videos section styles ends here */
@@ -334,27 +347,34 @@ main {
 
 /* game type content styles starts here */
 .game-type-container {
-  overflow-x: hidden;
   display: flex;
   align-items: center;
   justify-content: center;
   margin: 160px 0px 120px 0px;
-
   flex-wrap: wrap;
   gap: 36px;
 }
 .game-type-content {
   gap: 16px;
-  padding: 10px;
 }
 
+.game-type-content > * {
+  transform: translate(20px);
+  transition: transform 0.25s;
+}
+
+.game-type-content:hover > * {
+  transform: translate(0);
+  padding: 10px;
+  color: var(--pink);
+}
 .game-type-content:hover {
   border: 2px solid #ff42a5;
   border-radius: 50px;
 }
-.game-type-content h6:hover {
+/* .game-type-content h6:hover {
   color: var(--pink);
-}
+} */
 .game-type-content img {
   width: 60px;
   height: 60px;
@@ -468,6 +488,7 @@ footer {
   .videos-container {
     grid-template-columns: repeat(2, 1fr);
   }
+
   .play-content {
     width: 100%;
   }
@@ -475,11 +496,10 @@ footer {
     width: 100%;
   }
   /* footer */
-  .footer{
-     margin-top: 650px;
+  .footer {
+    margin-top: 650px;
   }
   footer {
-   
     height: 100vh;
   }
   .footer-content {
@@ -528,16 +548,17 @@ footer {
   .videos-container {
     grid-template-columns: repeat(1, 1fr);
   }
+
   .play-content {
     width: 100%;
   }
   .play-img {
     width: 100%;
   }
- 
+
   /* footer */
-   .footer{
-     margin-top: 650px;
+  .footer {
+    margin-top: 650px;
   }
   footer {
     height: 100vh;
@@ -546,12 +567,12 @@ footer {
     width: 80%;
     margin: 0 auto;
   }
-.icon-btn {
-  flex-wrap: wrap;
-}
-.icon-btn i{
-  font-size: 30px;
-}
+  .icon-btn {
+    flex-wrap: wrap;
+  }
+  .icon-btn i {
+    font-size: 30px;
+  }
   .f-menu {
     flex-wrap: wrap;
   }
