@@ -413,7 +413,7 @@ footer {
 }
 .footer-logo {
   gap: 20px;
-  margin-bottom: 30px;
+  margin-bottom: 40px;
 }
 .footer-menu .f-menu {
   gap: 60px;
@@ -447,7 +447,7 @@ footer {
 .footer-menu li {
   list-style: none;
 }
-.footer-menu a {
+.footer-menu .bottom-menu a {
   color: rgba(255, 255, 255, 0.6);
   text-decoration: none;
 }
@@ -485,10 +485,13 @@ footer {
     text-align: center;
     width: 100%;
   }
+
   .videos-container {
     grid-template-columns: repeat(2, 1fr);
   }
-
+.image__overlay {
+ 
+  height: 87%;}
   .play-content {
     width: 100%;
   }
@@ -548,14 +551,36 @@ footer {
   .videos-container {
     grid-template-columns: repeat(1, 1fr);
   }
-
+.image__overlay {
+ 
+  height: 92%;}
   .play-content {
     width: 100%;
   }
   .play-img {
     width: 100%;
   }
-
+.game-type-container {
+  display: grid;
+ grid-template-columns: repeat(3,1fr);
+ 
+}
+.game-type-content{
+  gap: 10px;
+}
+.game-type-content img {
+  width: 20px;
+  height: 20px;
+}
+.game-type-content:hover > * {
+ 
+  padding: 4px;
+}
+.game-type-content h6 {
+  color: var(--dark01);
+  font-size: 12px;
+  font-weight: var(--font-weight04);
+}
   /* footer */
   .footer {
     margin-top: 650px;
