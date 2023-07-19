@@ -2,7 +2,6 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  background-color: #fff;
   font-family: "Work Sans", sans-serif;
 }
 /* shared styles */
@@ -68,6 +67,7 @@
   padding: 21px 40px;
   border-radius: 48px;
   background-color: var(--pink);
+  cursor: pointer;
 }
 .btn-go-rogue {
   background-color: #4ec5f7;
@@ -82,6 +82,7 @@ nav {
 .nav-container {
   max-width: 1440px;
   margin: 0 auto;
+  padding: 10px 20px;
 }
 .logo {
   color: var(--dark01);
@@ -116,6 +117,7 @@ nav {
   background: rgba(11, 2, 35, 0.1);
   padding: 17px 24px;
   border: none;
+  cursor: pointer;
 }
 
 .fa-youtube,
@@ -136,7 +138,7 @@ nav {
 .banner-section {
   max-width: 1440px;
   margin: 0 auto;
-  padding: 0 20px;
+  padding: 0 30px;
   background-color: linear-gradient(
     223deg,
     rgba(13, 8, 21, 0.03) 0%,
@@ -214,7 +216,6 @@ main {
   width: 35%;
 }
 
-
 .text-purpose {
   color: var(--dark03);
   font-size: 24px;
@@ -276,15 +277,13 @@ main {
   color: var(--pink);
   background-color: transparent;
 }
-.videos-before-hover  p {
+.videos-before-hover p {
   margin: 20px 0px;
   color: var(--dark03);
   font-size: var(--font-size02);
-  font-weight: var(--font-weight03)
+  font-weight: var(--font-weight03);
 }
-.hover-content{
 
-}
 .fa-circle-play {
   background-color: transparent;
   color: white;
@@ -297,7 +296,7 @@ main {
 .videos-hover {
   display: none;
 }
-.videos-before-hover:hover + .videos-hover {
+.videos-content .videos-before-hover:hover + .videos-hover {
   display: block;
 }
 
@@ -335,15 +334,26 @@ main {
 
 /* game type content styles starts here */
 .game-type-container {
+  overflow-x: hidden;
   display: flex;
   align-items: center;
   justify-content: center;
   margin: 160px 0px 120px 0px;
+
   flex-wrap: wrap;
   gap: 36px;
 }
 .game-type-content {
   gap: 16px;
+  padding: 10px;
+}
+
+.game-type-content:hover {
+  border: 2px solid #ff42a5;
+  border-radius: 50px;
+}
+.game-type-content h6:hover {
+  color: var(--pink);
 }
 .game-type-content img {
   width: 60px;
@@ -357,6 +367,76 @@ main {
 /* game type content styles ends here */
 
 /* footer styles starts here */
+
+.footer {
+  margin-top: 580px;
+  position: relative;
+}
+
+footer {
+  position: absolute;
+  bottom: 0;
+  height: 60vh;
+  left: 0;
+  right: 0;
+  background: var(--dark01);
+  width: 100vw;
+  padding: 60px 0px;
+}
+.footer-content {
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  text-align: center;
+}
+.footer-logo {
+  gap: 20px;
+  margin-bottom: 30px;
+}
+.footer-menu .f-menu {
+  gap: 60px;
+  font-size: var(--font-size03);
+  font-weight: var(--font-weight02);
+}
+.footer-menu li {
+  list-style: none;
+}
+.footer-menu a {
+  color: var(--white);
+  text-decoration: none;
+}
+.icon-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 40px;
+  padding: 56px 0px;
+  cursor: pointer;
+}
+
+.icon-btn i {
+  font-size: 40px;
+  cursor: pointer;
+}
+.footer-menu .bottom-menu {
+  gap: 60px;
+  font-size: var(--font-size03);
+}
+.footer-menu li {
+  list-style: none;
+}
+.footer-menu a {
+  color: rgba(255, 255, 255, 0.6);
+  text-decoration: none;
+}
+
+.footer-content p {
+  color: rgba(255, 255, 255, 0.6);
+  font-weight: 500;
+  margin-top: 48px;
+}
 
 /* footer styles ends */
 
@@ -394,8 +474,34 @@ main {
   .play-img {
     width: 100%;
   }
+  /* footer */
+  .footer{
+     margin-top: 650px;
+  }
+  footer {
+   
+    height: 100vh;
+  }
+  .footer-content {
+    width: 80%;
+
+    margin: 0 auto;
+  }
+
+  .f-menu {
+    flex-wrap: wrap;
+  }
+  .footer-menu .f-menu {
+    gap: 50px;
+  }
+  .bottom-menu {
+    flex-wrap: wrap;
+  }
+  .footer-menu .bottom-menu {
+    gap: 50px;
+  }
+  /* footer ends */
 }
-/* .game-type-container */
 
 /* mobile device */
 @media screen and (max-width: 576px) {
@@ -428,5 +534,36 @@ main {
   .play-img {
     width: 100%;
   }
+ 
+  /* footer */
+   .footer{
+     margin-top: 650px;
+  }
+  footer {
+    height: 100vh;
+  }
+  .footer-content {
+    width: 80%;
+    margin: 0 auto;
+  }
+.icon-btn {
+  flex-wrap: wrap;
+}
+.icon-btn i{
+  font-size: 30px;
+}
+  .f-menu {
+    flex-wrap: wrap;
+  }
+  .footer-menu .f-menu {
+    gap: 40px;
+  }
+  .bottom-menu {
+    flex-wrap: wrap;
+  }
+  .footer-menu .bottom-menu {
+    gap: 40px;
+  }
+  /* footer ends */
 }
 /*  */
