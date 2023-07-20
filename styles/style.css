@@ -469,6 +469,9 @@ footer {
     margin-bottom: 60px;
   }
   /* banner */
+  .banner {
+  background-image: none;
+}
   .banner-container {
     flex-direction: column-reverse;
   }
