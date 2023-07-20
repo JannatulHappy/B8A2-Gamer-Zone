@@ -138,15 +138,15 @@ nav {
 }
 /* nav styles ends here */
 /* banner section starts here */
+.banner {
+  background-image: url("../images/Group 14.png");
+  background-repeat: no-repeat;
+  background-size: contain;
+}
 .banner-section {
   max-width: 1440px;
   margin: 0 auto;
   padding: 0 30px;
-  background-color: linear-gradient(
-    223deg,
-    rgba(13, 8, 21, 0.03) 0%,
-    rgba(241, 68, 174, 0.03) 100%
-  );
 }
 .banner-container {
   display: flex;
