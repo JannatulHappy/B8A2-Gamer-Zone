@@ -139,7 +139,7 @@ nav {
 /* nav styles ends here */
 /* banner section starts here */
 .banner {
-  background-image: url("../images/Group 14.png");
+  background-image: url("./../images/Group 14.png");
   background-repeat: no-repeat;
   background-size: contain;
 }
